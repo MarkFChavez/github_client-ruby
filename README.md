@@ -1,15 +1,13 @@
 # GithubClient
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/github_client`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Ruby wrapper for GitHub API.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'github_client'
+gem 'github_client-ruby'
 ```
 
 And then execute:
@@ -18,11 +16,50 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install github_client
+    $ gem install github_client-ruby
 
 ## Usage
 
-TODO: Write usage instructions here
+### Initialize the Client
+
+```ruby
+client = GithubClient.new(
+  host: "https://api.github.com",
+  access_token: "access token",
+)
+```
+
+### Fetch your repositories
+
+See [docs](https://developer.github.com/v3/repos/#list-your-repositories).
+
+```ruby
+# shows all repositories by default
+
+client.get_user_repositories(
+  visibility: "all, private or public"
+)
+```
+
+### Fetch a specific user's repositories
+
+See [docs](https://developer.github.com/v3/repos/#list-user-repositories).
+
+```ruby
+client.repositories_for(
+  user: "username",
+)
+```
+
+### Fetch an organization's repositories
+
+See [docs](https://developer.github.com/v3/repos/#list-organization-repositories).
+
+```ruby
+client.get_org_repositories(
+  org: "name of org",
+)
+```
 
 ## Development
 
@@ -32,7 +69,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/github_client. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/github_client-ruby. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
@@ -40,4 +77,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the GithubClient project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/github_client/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the GithubClient::Ruby project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/github_client-ruby/blob/master/CODE_OF_CONDUCT.md).
