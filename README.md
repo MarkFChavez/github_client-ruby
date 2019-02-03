@@ -29,6 +29,15 @@ client = GithubClient.new(
 )
 ```
 
+### Or, apply it globally
+
+```ruby
+GithubClient.configure do |config|
+  config.host = "https://api.github.com"
+  config.access_token = "your access token"
+end
+```
+
 ### Fetch your repositories
 
 See [docs](https://developer.github.com/v3/repos/#list-your-repositories).
