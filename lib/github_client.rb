@@ -1,6 +1,6 @@
 require "github_client/version"
+require "api_client_base"
 
 module GithubClient
-  class Error < StandardError; end
-  # Your code goes here...
+  include APIClientBase::Base.module
 end
