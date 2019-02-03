@@ -7,7 +7,7 @@ require "github_client/responses/get_user_repositories_response"
 require "github_client/responses/get_org_repositories_response"
 
 module GithubClient
-  include APIClientBase::Base.module
+  include APIClientBase::Base
 
   with_configuration do
     has :host, classes: String
