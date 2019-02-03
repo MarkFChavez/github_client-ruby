@@ -42,16 +42,6 @@ end
 
 See `spec/acceptance` for usage.
 
-### Fetch an organization's repositories
-
-See [docs](https://developer.github.com/v3/repos/#list-organization-repositories).
-
-```ruby
-client.get_org_repositories(
-  org: "name of org",
-)
-```
-
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
