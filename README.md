@@ -7,7 +7,7 @@ Ruby wrapper for GitHub API.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'github_client-ruby'
+gem 'github_client'
 ```
 
 And then execute:
@@ -16,7 +16,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install github_client-ruby
+    $ gem install github_client
 
 ## Usage
 
