@@ -1,3 +1,4 @@
 ---
 host: "https://api.github.com"
 access_token: "your access token"
+org: "your github organization"

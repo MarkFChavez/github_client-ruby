@@ -7,6 +7,7 @@ module GithubClient
     attribute :access_token, String
 
     api_action :get_user_repositories
+    api_action :get_org_repositories
 
     private
 

@@ -42,16 +42,6 @@ end
 
 See `spec/acceptance` for usage.
 
-### Fetch a specific user's repositories
-
-See [docs](https://developer.github.com/v3/repos/#list-user-repositories).
-
-```ruby
-client.repositories_for(
-  user: "username",
-)
-```
-
 ### Fetch an organization's repositories
 
 See [docs](https://developer.github.com/v3/repos/#list-organization-repositories).
