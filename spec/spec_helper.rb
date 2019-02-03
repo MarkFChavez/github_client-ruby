@@ -1,5 +1,6 @@
 require "bundler/setup"
 require "github_client"
+require "active_support/core_ext/hash/indifferent_access"
 require "pathname"
 require "yaml"
 
