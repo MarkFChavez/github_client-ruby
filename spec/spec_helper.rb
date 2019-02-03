@@ -3,10 +3,13 @@ require "github_client"
 require "active_support/core_ext/hash/indifferent_access"
 require "pathname"
 require "yaml"
+require "pry"
 
 SPEC_DIR    = Pathname.new(File.dirname(__FILE__))
 CONFIG_PATH = SPEC_DIR.join("config.yml")
 CONFIG      = YAML.load_file(CONFIG_PATH).with_indifferent_access
+
+Dir[SPEC_DIR.join("support", "*.rb")].each {|f| require f}
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

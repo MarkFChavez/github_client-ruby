@@ -40,15 +40,7 @@ end
 
 ### Fetch your repositories
 
-See [docs](https://developer.github.com/v3/repos/#list-your-repositories).
-
-```ruby
-# shows all repositories by default
-
-client.get_user_repositories(
-  visibility: "all, private or public"
-)
-```
+See `spec/acceptance` for usage.
 
 ### Fetch a specific user's repositories
 
