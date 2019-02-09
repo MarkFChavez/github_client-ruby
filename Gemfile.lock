@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    github_client (1.2.0)
+    github_client (2.0.0)
       api_client_base
       typhoeus
 
