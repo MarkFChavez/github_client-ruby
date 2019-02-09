@@ -1,5 +1,5 @@
 module GithubClient
-  class GetUserRepositoriesRequest
+  class GetRepositoriesRequest
 
     include APIClientBase::Request.module
 

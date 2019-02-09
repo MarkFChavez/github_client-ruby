@@ -18,8 +18,6 @@ Or install it yourself as:
 
     $ gem install github_client
 
-## Usage
-
 ### Initialize the Client
 
 ```ruby
@@ -38,7 +36,7 @@ GithubClient.configure do |config|
 end
 ```
 
-### Fetch your repositories
+## Usage
 
 See `spec/acceptance` for usage.
 

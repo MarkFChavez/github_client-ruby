@@ -1,6 +1,6 @@
 require "spec_helper"
 
-RSpec.describe "#get_user_repositories" do
+RSpec.describe "#get_repositories" do
 
   let(:client) do
     GithubClient.new(
@@ -12,7 +12,7 @@ RSpec.describe "#get_user_repositories" do
   describe "#body" do
     context "without any arguments" do
       it "gets all repositories", vcr: {record: :once} do
-        response = client.get_user_repositories()
+        response = client.get_repositories()
         expect(response).to be_success
         expect(response.body).to be_an Array
       end
@@ -20,7 +20,7 @@ RSpec.describe "#get_user_repositories" do
 
     context "with `visibility` argument" do
       it "gets repositories based on visibility", vcr: {record: :once} do
-        response = client.get_user_repositories(visibility: :private)
+        response = client.get_repositories(visibility: :private)
         expect(response).to be_success
         expect(response.body).to be_an Array
         repos = response.body
