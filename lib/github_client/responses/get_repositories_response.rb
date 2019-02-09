@@ -2,7 +2,6 @@ module GithubClient
   class GetRepositoriesResponse
 
     include APIClientBase::Response.module
-
     attribute :body, Array, lazy: true, default: :default_body
 
     private

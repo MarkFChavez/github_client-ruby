@@ -2,7 +2,6 @@ module GithubClient
   class GetRepositoriesForUserRequest
 
     include APIClientBase::Request.module
-
     attribute :access_token, String
     attribute :username, String
 

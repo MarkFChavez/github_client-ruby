@@ -2,7 +2,6 @@ module GithubClient
   class GetRepositoriesRequest
 
     include APIClientBase::Request.module
-
     attribute :access_token, String
     attribute :visibility, String, default: "all"
 

@@ -2,7 +2,6 @@ module GithubClient
   class GetOrgRepositoriesRequest
 
     include APIClientBase::Request.module
-
     attribute :access_token, String
     attribute :org, String
 
